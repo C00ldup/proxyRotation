@@ -1,5 +1,7 @@
-sometime the proxy have reachable website, i suggest to check before use it if you supposed to make web scraping:
+the code is a bit dirty so if u need some changes feel free to make it
 
+sometime the proxy have reachable website, i suggest to check before use it if you supposed to make web scraping:
+```
 while True:
   while True:
       response = proxy(db="./PROXY/proxy.db").proxy_request(self.url, timeout=8)
@@ -10,3 +12,4 @@ while True:
   
   if info is not None or info == []:
       break
+```
