@@ -155,17 +155,17 @@ supported list type:
 ip:port
 
 store proxy:
-proxy = proxy(db="./PROXY/proxy.db")
+proxy = proxy(db="./proxy.db")
 while True:
     proxy.try_proxy(proxy.get_new_proxy_list(proxy_dict=proxy.db_random_proxy()), save_proxy=True)
     
 use proxy:
-proxy(db="./PROXY/proxy.db").proxy_request(self.url, timeout=8)
+proxy(db="./proxy.db").proxy_request(self.url, timeout=8)
 
 -> return a requests response
 
 get random proxy to use in a request
-proxy(db="./PROXY/proxy.db").db_random_proxy()
+proxy(db="./proxy.db").db_random_proxy()
 
 get new proxy from online list
 proxy.try_proxy(proxy.get_new_proxy_list(proxy_dict=proxy.db_random_proxy()))
